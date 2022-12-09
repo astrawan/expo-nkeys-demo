@@ -1,5 +1,7 @@
 import type { ExpoConfig } from '@expo/config';
 
+const PROJECT_ID = '8de3cae4-062d-419d-812f-bd9ccf9c66f8';
+
 const config: ExpoConfig = {
   name: 'expo-nkeys-demo',
   slug: 'expo-nkeys-demo',
@@ -14,7 +16,7 @@ const config: ExpoConfig = {
   },
   updates: {
     fallbackToCacheTimeout: 0,
-    url: 'https://u.expo.dev/8de3cae4-062d-419d-812f-bd9ccf9c66f8',
+    url: `https://u.expo.dev/${PROJECT_ID}`,
   },
   assetBundlePatterns: ['**/*'],
   ios: {
@@ -33,6 +35,11 @@ const config: ExpoConfig = {
   },
   web: {
     favicon: './assets/favicon.png',
+  },
+  extra: {
+    eas: {
+      projectId: PROJECT_ID,
+    },
   },
 };
 
